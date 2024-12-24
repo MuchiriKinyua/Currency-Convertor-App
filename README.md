@@ -19,11 +19,10 @@ This is a simple Currency Converter web application that allows users to convert
 # Installation and Setup
 
     Clone the Repository:
-
-git clone https://github.com/MuchiriKinyua/Currency-Convertor-App
-cd <repository-folder>
-
-# Add API Key:
+    git clone https://github.com/MuchiriKinyua/Currency-Convertor-App
+    cd <repository-folder>
+    
+    Add API Key:
 
     Replace <API_KEY> in the script with your ExchangeRate API key:
 
@@ -57,11 +56,6 @@ cd <repository-folder>
     Font Awesome: For icons.
     Flag Icon CSS: For country flags.
     ExchangeRate API: For fetching real-time rates.
-
-# Screenshots
-
-    Home Page:
-    Converted Output:
 
 # Future Improvements
 
