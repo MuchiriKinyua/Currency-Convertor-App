@@ -19,6 +19,17 @@ for (let i = 0; i < dropList.length; i++) {
         let optionTag = `<option value="${currency_code}" ${selected}>${currency_code}</option>`;
         dropList[i].insertAdjacentHTML("beforeend", optionTag);
     }
+    dropList[i].addEventListener("change", e=>{
+        loadFlag(e.target);
+    });
+}
+function loadFlag(element) {
+    const selectedCode = element.value; // Get the selected currency code
+    if (country_list[selectedCode]) {
+        // Update the flag image
+        let imgTag = element.parentElement.querySelector("img");
+        imgTag.src = `https://flagcdn.com/w40/${country_list[selectedCode].toLowerCase()}.png`;
+    }
 }
 window.addEventListener("load", () => {
     getExchangeRate();
