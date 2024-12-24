@@ -38,6 +38,15 @@ getButton.addEventListener("click", e => {
     e.preventDefault();
     getExchangeRate();
 });
+const exchangeIcon = document.querySelector(".drop-list .icon");
+exchangeIcon.addEventListener("click", ()=>{
+    let tempCode = fromCurrency.value;
+    fromCurrency.value = toCurrency.value;
+    toCurrency.value = tempCode;
+    loadFlag(fromCurrency);
+    loadFlag(toCurrency);
+    getExchangeRate();
+});
 function getExchangeRate(){
     const amount = document.querySelector(".amount input");
     exchangeRateTxt = document.querySelector(".exchange-rate");
@@ -52,5 +61,7 @@ function getExchangeRate(){
         let exchangeRate = result.conversion_rates[toCurrency.value];
         let totalExchangeRate = (amountVal * exchangeRate).toFixed(2);
         exchangeRateTxt.innerText = `${amountVal} ${fromCurrency.value} = ${totalExchangeRate} ${toCurrency.value}`;
-    })
+    }).catch(() => {
+        exchangeRateTxt.innerText = "Something went wrong";
+    });
 }
