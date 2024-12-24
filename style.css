@@ -5,3 +5,90 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #153677, #4e085f);
+}
+.wrapper{
+    background: #fff;
+    width: 370px;
+    padding: 30px;
+    border-radius: 7px;
+}
+.wrapper form{
+    margin: 40px 0 20px 0;
+}
+form :where(input, select, button){
+    width: 100%;
+    outline: none;
+    border: none;
+}
+form p{
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+form input{
+    height: 50px;
+    font-size: 17px;
+    padding: 0 15px;
+    border: 1px solid #999;
+}
+form input:focus{
+    padding: 0 15px;
+    border: 2px solid #675AFE;
+}
+form .drop-list{
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+.drop-list .select-box{
+    display: flex;
+    height: 45px;
+    width: 115px;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #999;
+}
+.select-box select {
+    width: auto;
+    font-size: 16px;
+    margin: 0 -5px 0 5px;
+    background: none; 
+    appearance: none; 
+    -webkit-appearance: none; 
+    -moz-appearance: none;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+}
+
+.select-box img {
+    max-width: 25px;
+    margin-right: 5px; 
+}
+
+.select-box {
+    background: #fff;
+}
+.drop-list .icon{
+    cursor: pointer;
+    font-size: 22px;
+    margin-top: 30px;
+}
+form .exchange-rate{
+    font-size: 17px;
+    margin: 20px 0 30px;
+}
+form button{
+    height: 52px;
+    color: #fff;
+    font-size: 17px;
+    cursor: pointer;
+    background: #675AFE;
+}
